@@ -1,5 +1,64 @@
+# Medieval Colony Sim
+## Integrated Map Generation Code
 
-## Integrated Map Generation Code (merged)
+
+**Medieval Colony survival RTS powered by Laravel & Livewire**
+
+This repository contains a working foundation for a persistent, server-authoritative colony simulation inspired by RimWorld,
+adapted to a medieval setting. It includes a procedural map generator, A* pathfinding with diagonal movement and weighted terrain,
+a server-side GameEngine tick loop, BotManager AI with farming cycles and multi-worker coordination, and initial colony systems.
+
+> Note: This bundle provides code skeletons and implementations but does not include Composer-installed vendor files.
+Run `composer install` inside the project to fetch dependencies and enable the full Laravel runtime.
+
+## Quick start (development)
+
+Requirements: Docker + Docker Compose OR PHP 8.1, Composer, MySQL, Redis
+
+Using Docker Compose:
+```bash
+# build and start containers (dev)
+docker compose -f docker-compose.dev.yml up -d --build
+
+# enter app container
+docker exec -it mcs_app_dev bash
+
+# inside container:
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve --host=0.0.0.0 --port=8000
+```
+
+Without Docker (local PHP development):
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
+```
+
+## What is included (high level)
+- Procedural map generator (app/Services/MapGenerator.php)
+- GameEngine with tick loop and colony hooks (app/Services/GameEngine.php)
+- A* Pathfinder (app/Services/Pathfinder.php) with MinHeap
+- BotManager AI (app/Services/BotManager.php)
+- Harvesting logic & Construction services (app/Services)
+- Colonist systems: NeedsSystem, JobScheduler, ColonistManager (app/Services)
+- WorkGivers: Lumber, Harvest, Haul
+- Migrations for games, players, maps, tiles, units, commands, resource_nodes, colonists, tasks, items, recipes
+- PHPUnit tests scaffolding (tests/)
+- Docker development + production compose files
+
+See `docs/` for the procedural map visuals and logo (drop your banner in docs/banner.png)
+
+## Next steps
+1. Run composer to install Laravel and Livewire.
+2. Run migrations and seeders.
+3. Start the scheduler & queue worker to process ticks and jobs.
+4. Open the game UI and connect multiple clients to observe server-authoritative simulation.
 
 I have merged an external map generation toolkit into `app/Helpers/` which includes:
 - Perlin/Noise-based heightmap generation
@@ -30,11 +89,7 @@ php artisan map:4water
 - The mapgen uses its own MapDatabase and Cell models under `app/Helpers/MapDatabase/`. If you wish to map these directly to your game's `tiles` and `resource_nodes` tables, I can add an importer that converts generated Cells into Eloquent `Tile` and `ResourceNode` rows. Tell me if you'd like me to implement that importer (recommended).
 - The map generator supports deterministic seeds. Pass seed options via the console commands (check command options in `app/Console/Commands/`).
 
-
-
-## Co-Op Procedurally generated RTS Colony survival
-
-
+## Co-Op Procedurally generated RTS Colony survivalW
 
 That is the idea anyways
 

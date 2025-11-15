@@ -1,0 +1,19 @@
+{
+    "name": "you/medieval-colony-sim",
+    "description": "Medieval Colony survival RTS powered by Laravel + Livewire",
+    "require": {
+        "php": ">=8.1",
+        "laravel/framework": "^10.0",
+        "livewire/livewire": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r "file_exists('.env') || copy('.env.example', '.env');""
+        ]
+    }
+}
