@@ -1,15 +1,14 @@
-# colony
-Co-Op Procedurally generated RTS Colony survival
+# Colony
+## Co-Op Procedurally generated RTS Colony survival
+That is the idea anyways
 
 Includes:
 
-A* pathfinding tests
+- A* pathfinding
 
-Binary heap performance tests
+- GameEngine tick-loop integration
 
-Bot AI behavior tests
-
-GameEngine tick-loop integration tests
+- Procedurally Generated Terrain
 
 🗺️ Gameplay Overview
 🧑‍🌾 Colonists
@@ -46,88 +45,88 @@ Sync to clients
 
 🌾 Resources
 
-Trees
+ - Trees
 
-Stone
+ - Stone
 
-Fields (wheat, barley, vegetables)
+ - Fields (wheat, barley, vegetables)
 
-Forageables
+ - Forageables
 
 🏗️ Buildings
 
-Stockpiles
+ - Stockpiles
 
-Houses
+ - Houses
 
-Workshops
+ - Workshops
 
-Farms
+ - Farms
 
-Storage huts
+ - Storage huts
 
-Walls and defenses
+ - Walls and defenses
 
 🧭 A* Pathfinding
 
-Custom binary min-heap (~40% faster than SplPriorityQueue)
+ - Custom binary min-heap (~40% faster than SplPriorityQueue)
 
-Terrain weights (mud, grass, roads)
+ - Terrain weights (mud, grass, roads)
 
-Diagonal movement
+ - Diagonal movement
 
-Early exit optimization
+ - Early exit optimization
 
 🤝 Contributing
 
-Contributions are welcome!
+ - Contributions are welcome!
 
-Fork the repo
+ - Fork the repo
 
-Create a feature branch
+ - Create a feature branch
 
-Submit a PR
+ - Submit a PR
 
-Include test coverage where appropriate
+ - Include test coverage where appropriate
 
 📅 Planned Features (Roadmap)
 🌱 Gameplay
 
-Temperature system & seasons
+ - Temperature system & seasons
 
-Hunting & wildlife
+ - Hunting & wildlife
 
-Illness + medicine
+ - Illness + medicine
 
-Bandit raids
+ - Bandit raids
 
-Diplomacy/reputation system
+ - Diplomacy/reputation system
 
 ⚙️ Systems
 
-Save/load multiple worlds
+ - Save/load multiple worlds
 
-Deeper colonist AI (psych traits, work priorities RimWorld-style)
+ - Deeper colonist AI (psych traits, work priorities RimWorld-style)
 
-Auto-designated work zones
+ - Auto-designated work zones
 
-Blueprint system for buildings
+ - Blueprint system for buildings
 
 🌐 Multiplayer Enhancements
 
-Player factions
+ - Player factions
 
-Territory
+ - Territory
 
-Shared trade economy
+ - Shared trade economy
 
 ⭐ Support the Project
 
-If you'd like to support development:
+ - If you'd like to support development:
 
 ⭐ Star the repo
 
-🍴 Contribute code
+ - 🍴 Contribute code
 
 🧪 Help test the simulation
 
