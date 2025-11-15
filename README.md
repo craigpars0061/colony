@@ -89,7 +89,7 @@ php artisan map:4water
 - The mapgen uses its own MapDatabase and Cell models under `app/Helpers/MapDatabase/`. If you wish to map these directly to your game's `tiles` and `resource_nodes` tables, I can add an importer that converts generated Cells into Eloquent `Tile` and `ResourceNode` rows. Tell me if you'd like me to implement that importer (recommended).
 - The map generator supports deterministic seeds. Pass seed options via the console commands (check command options in `app/Console/Commands/`).
 
-## Co-Op Procedurally generated RTS Colony survivalW
+## Co-Op Procedurally generated RTS Colony survival
 
 That is the idea anyways
 
@@ -103,33 +103,33 @@ Includes:
 
 Each colonist has:
 
-Stats
+- Stats
 
-Mood
+- Mood
 
-Needs
+- Needs
 
-Skills
+- Skills
 
-Current job state
+- Current job state
 
-Pathfinding agent
+- Pathfinding agent
 
 🔁 Tick Loop
 
-The entire simulation ticks at 250 ms intervals:
+- The entire simulation ticks at 250 ms intervals:
 
-Update colonists
+- Update colonists
 
-Process jobs
+- Process jobs
 
-Evaluate states
+- Evaluate states
 
-Move units
+- Move units
 
-Harvest/build
+- Harvest/build
 
-Sync to clients
+- Sync to clients
 
 🌾 Resources
 
@@ -182,15 +182,3 @@ Sync to clients
 - Player factions
 - Territory
 - Shared trade economy
-
-⭐ Support the Project
-
-- If you'd like to support development:
-
-​	⭐ Star the repo
-
-​	🍴 Contribute code
-
-​	🧪 Help test the simulation
-
-​	📣 Share ideas and feature requests
